@@ -10,8 +10,9 @@ namespace DS3DungeonClassLibrary
     {
         public static void Attack(Character attacker, Character defender)
         {
-            //Use a dice roll from 1-100 to use as a basis to determin if the attacker hits
-            int diceroll = new Random().Next(1, 101);
+            Random rand = new Random();
+            //Use a dice roll from 1-100 to use as a basis to determine if the attacker hits
+            int diceroll = rand.Next(1, 101);
             //The Sleep() allows us to pause the execution of code for a defined number of milliseconds
             System.Threading.Thread.Sleep(35);
             if (diceroll <= attacker.CalcHitChance() - defender.CalcBlock())

@@ -22,25 +22,25 @@ namespace DS3DungeonClassLibrary
                     MaxLife += 15;
                     Life += 15;
                     HitChance -= 5;
-                    block += 5;
+                    Block += 5;
                     break;
                 case Class.Mercenary:
                     MaxLife += 15;
                     Life += 15;
                     HitChance -= 5;
-                    block += 5;
+                    Block += 5;
                     break;
                 case Class.Warrior:
                     MaxLife += 15;
                     Life += 15;
                     HitChance -= 4;
-                    block += 5;
+                    Block += 5;
                     break;
                 case Class.Herald:
                     MaxLife += 15;
                     Life += 15;
                     HitChance -= 5;
-                    block += 5;
+                    Block += 5;
                     break;
                 case Class.Thief:
                     MaxLife += 10;
@@ -59,9 +59,9 @@ namespace DS3DungeonClassLibrary
                     break;
                 default:
                     break;
-            }//End Switch
+            }
 
-        }//end FQCTOR
+        }
 
         public override string ToString()
         {

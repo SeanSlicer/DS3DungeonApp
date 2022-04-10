@@ -31,7 +31,6 @@ namespace DS3DungeonClassLibrary
             MaxDamage = maxDamage;
             IsTwoHanded = isTwoHanded;
         }//end FQCTOR
-
         public override string ToString()
         {
             return string.Format($"{Name}\nDamage: {MinDamage} to {MaxDamage}\nHit Modifier: {BonusHitChance}\n{(IsTwoHanded ? "Two" : "One")}-Handed");

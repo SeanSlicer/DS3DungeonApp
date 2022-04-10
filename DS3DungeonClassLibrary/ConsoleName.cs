@@ -8,6 +8,16 @@ namespace DS3DungeonClassLibrary
 {
     public static class ConsoleName
     {
+        private static void WriteText(ConsoleColor color, int center, string centerText)
+        {
+            const int DelayAfterPrint = 250;
+
+            ForegroundColor = color;
+            WriteLine(string.Format($"{{0,{center}}}", centerText));
+            Thread.Sleep(DelayAfterPrint);
+            Clear();
+        }
+
         public static void PrintName()
         {
             const int ColorIterations = 3;
@@ -23,14 +33,6 @@ namespace DS3DungeonClassLibrary
             }
         }
 
-        private static void WriteText(ConsoleColor color, int center, string centerText)
-        {
-            const int DelayAfterPrint = 250;
 
-            ForegroundColor = color;
-            WriteLine(string.Format($"{{0,{center}}}", centerText));
-            Thread.Sleep(DelayAfterPrint);
-            Clear();
-        }
-    }   
+    }
 }

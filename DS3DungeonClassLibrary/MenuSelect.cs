@@ -34,10 +34,20 @@ namespace DS3DungeonClassLibrary
 
                 case ConsoleKey.A:
                     Combat.Battle(player, monster);
+                    //End of first boss
+                    if (Monsters.Vordt.Life == 0 && KillCount == 15)
+                    {
+                        Console.Clear();
+                        Console.WriteLine("You have reached the Undead Settlement and cleared the first boss");
+                        System.Threading.Thread.Sleep(2000);
+                        Console.WriteLine("...");
+                        System.Threading.Thread.Sleep(2500);
+                        Console.Clear();
+                    }
                     if (monster.Life <= 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Cyan;
-                        Console.WriteLine("You killed the " + monster.Name + "!");
+                        Console.WriteLine("You slayed the " + monster.Name + "!");
                         Console.ResetColor();
                         gameStatus = GameStatus.Reload;
                         System.Threading.Thread.Sleep(2000);
@@ -46,6 +56,13 @@ namespace DS3DungeonClassLibrary
                     break;
 
                 case ConsoleKey.F:
+                    if (monster == Monsters.Vordt)
+                    {
+                        Combat.Attack(monster, player);
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("You might not want to try to do that again");
+                        Console.ResetColor();
+                    }
                     if (KillCount != 15)
                     {
                         Console.ForegroundColor = ConsoleColor.White;
@@ -55,13 +72,7 @@ namespace DS3DungeonClassLibrary
                         Combat.Attack(monster, player);
                         gameStatus = GameStatus.Reload;
                     }
-                    if (KillCount == 15)
-                    {
-                        Combat.Attack(monster, player);
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("You might not want to try to do that again");
-                        Console.ResetColor();
-                    }
+                    
                     break;
 
                 case ConsoleKey.V:

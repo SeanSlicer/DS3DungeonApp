@@ -8,6 +8,8 @@ namespace DS3DungeonClassLibrary
 {
     public class Monster : Character
     {
+        public static Random rand = new Random();
+
         private int _minDamage;
 
         public int MaxDamage { get; set; }
@@ -30,8 +32,6 @@ namespace DS3DungeonClassLibrary
         {
             return string.Format($"{Name}\n{Description}\n{(Life == MaxLife ? "It is uninjured" : Life <= MaxLife * .25 ? "The monster seems to be close to death" : "It is injured")}");
         }
-
-        private static readonly Random rand = new Random();
 
         public override int CalcDamage()
         {

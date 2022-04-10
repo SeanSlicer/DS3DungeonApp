@@ -46,16 +46,16 @@
     <Compile Include="Combat.cs" />
     <Compile Include="ConsoleName.cs" />
     <Compile Include="GameStatus.cs" />
-    <Compile Include="ItemDatabase.cs" />
-    <Compile Include="Item.cs" />
     <Compile Include="MenuSelect.cs" />
     <Compile Include="Monster.cs" />
     <Compile Include="MonsterIntro.cs" />
+    <Compile Include="Monsters.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Spider.cs" />
     <Compile Include="Weapon.cs" />
+    <Compile Include="Weapons.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
