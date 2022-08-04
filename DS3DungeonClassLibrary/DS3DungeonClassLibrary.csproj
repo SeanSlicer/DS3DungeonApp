@@ -46,6 +46,7 @@
     <Compile Include="Combat.cs" />
     <Compile Include="ConsoleName.cs" />
     <Compile Include="GameStatus.cs" />
+    <Compile Include="HealingItem.cs" />
     <Compile Include="MenuSelect.cs" />
     <Compile Include="Monster.cs" />
     <Compile Include="MonsterIntro.cs" />
