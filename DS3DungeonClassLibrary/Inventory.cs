@@ -7,9 +7,10 @@ using DS3DungeonClassLibrary;
 
 namespace DS3DungeonClassLibrary
 {
-    internal class Inventory
+    public class Inventory
     {
-        List<Weapon> inventoryWeapons = new List<Weapon>();
-        List<HealingItem> healingItems = new List<HealingItem>();
+        public static List<Weapon> inventoryWeapons { get; set; }  = new List<Weapon>();
+        public List<HealingItem> healingItems { get; set; } = new List<HealingItem>();
+
     }
 }
