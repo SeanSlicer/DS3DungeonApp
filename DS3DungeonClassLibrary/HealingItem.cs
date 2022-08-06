@@ -18,10 +18,10 @@ namespace DS3DungeonClassLibrary
             Description = description ;
             HealingAmount = healingAmount;
             
-        }//end FQCTOR
+        }
         public override string ToString()
         {
-            return string.Format($"");
+            return string.Format($"{Name}\n Description: {Description}\nHeals {HealingAmount} health.");
         }
 
     }
