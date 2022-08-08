@@ -57,6 +57,7 @@
     <Compile Include="Room.cs" />
     <Compile Include="Spider.cs" />
     <Compile Include="Weapon.cs" />
+    <Compile Include="HealingItems.cs" />
     <Compile Include="Weapons.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
