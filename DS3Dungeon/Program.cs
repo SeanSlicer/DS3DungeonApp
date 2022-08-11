@@ -23,6 +23,7 @@ namespace DS3Dungeon
             heroName = Console.ReadLine();
             Console.Clear();
             bool classMenu = true;
+            Inventory inventory = new Inventory();
             do
             {
 
@@ -138,7 +139,7 @@ namespace DS3Dungeon
 
                 Console.WriteLine(MonsterIntro.GetIntro(), monster.Name);
                 //menu
-                MenuSelect menuSelect = new MenuSelect(heroName, player, monster);
+                MenuSelect menuSelect = new MenuSelect(heroName, player, monster, inventory);
                 do
                 {
                     gameStatus = menuSelect.CallMenu(ref KillCount);

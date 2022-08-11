@@ -12,5 +12,10 @@ namespace DS3DungeonClassLibrary
         public static List<Weapon> inventoryWeapons { get; set; }  = new List<Weapon>();
         public List<HealingItem> healingItems { get; set; } = new List<HealingItem>();
 
+        public override string ToString()
+        {
+            return "";
+        }
+
     }
 }

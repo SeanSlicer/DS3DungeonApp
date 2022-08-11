@@ -10,11 +10,14 @@ namespace DS3DungeonClassLibrary
 
         private readonly Monster monster;
 
-        public MenuSelect(string heroName, Player player, Monster monster)
+        private readonly Inventory inventory;
+
+        public MenuSelect(string heroName, Player player, Monster monster, Inventory inventory)
         {
             this.heroName = heroName;
             this.player = player;
             this.monster = monster;
+            this.inventory = inventory;
         }
 
         public GameStatus CallMenu(ref int KillCount)
@@ -24,6 +27,7 @@ namespace DS3DungeonClassLibrary
             Console.WriteLine($"\nLife: {player.Life}        Score: {KillCount}\n" +
             "Champion of ash, Choose an action:\n" +
                 "A)ttack\n" +
+                "I)nventory\n" +
                 "F)lee\n" +
                 "V)iew Stats\n" +
                 "M)onster Stats\n");
@@ -53,6 +57,11 @@ namespace DS3DungeonClassLibrary
                         System.Threading.Thread.Sleep(2000);
                         KillCount++;
                     }
+                    break;
+
+                case ConsoleKey.I:
+                    
+                    
                     break;
 
                 case ConsoleKey.F:
